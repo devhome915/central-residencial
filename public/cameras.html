@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101827" />
+    <title>Monitoramento de câmeras — Central Residencial</title>
+    <link rel="stylesheet" href="./css/tokens.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/cameras.css" />
+  </head>
+  <body class="camera-page">
+    <header class="camera-header">
+      <button id="back-button" class="back-button" type="button" aria-label="Voltar à página anterior">
+        <span aria-hidden="true">←</span> Voltar
+      </button>
+      <div>
+        <h1>Monitoramento</h1>
+        <p>Visualização ao vivo das câmeras conectadas</p>
+      </div>
+      <span class="camera-count">4 câmeras</span>
+    </header>
+
+    <main class="camera-layout">
+      <section class="main-camera-section" aria-label="Câmera selecionada">
+        <div class="main-camera-heading">
+          <div>
+            <span class="live-indicator">AO VIVO</span>
+            <h2 id="selected-camera-title">Câmera 1</h2>
+          </div>
+          <button
+            id="fullscreen-button"
+            class="fullscreen-button"
+            type="button"
+            aria-label="Maximizar vídeo"
+            aria-pressed="false"
+          >
+            <span aria-hidden="true">⛶</span>
+            <span id="fullscreen-label">Maximizar</span>
+          </button>
+        </div>
+        <div id="main-camera-frame" class="main-camera-frame">
+          <iframe
+            id="main-camera"
+            title="Transmissão ao vivo da Câmera 1"
+            allow="autoplay; fullscreen; picture-in-picture"
+          ></iframe>
+        </div>
+      </section>
+
+      <aside class="camera-sidebar" aria-labelledby="camera-list-title">
+        <div class="sidebar-heading">
+          <h2 id="camera-list-title">Câmeras</h2>
+          <span>Selecione para visualizar</span>
+        </div>
+        <div id="camera-list" class="camera-list"></div>
+      </aside>
+    </main>
+
+    <script type="module" src="./cameras.js"></script>
+  </body>
+</html>
