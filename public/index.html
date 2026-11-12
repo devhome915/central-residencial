@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Central Residencial</title>
+    <link rel="stylesheet" href="./css/tokens.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <link rel="stylesheet" href="./css/notifications.css" />
+  </head>
+
+  <body>
+    <main class="app-shell">
+      <h1>🏠 Central Residencial</h1>
+
+      <p>
+        Protótipo local: os eventos abaixo são simulados,
+        não estão conectados aos sensores reais.
+      </p>
+
+      <a class="camera-dashboard-link" href="./cameras.html">Abrir monitoramento de câmeras</a>
+
+      <section class="panel">
+        <label for="token">Token da API:</label>
+
+        <div class="field-group">
+          <input
+            id="token"
+            type="password"
+            autocomplete="off"
+            placeholder="Cole o API_TOKEN"
+          />
+
+          <button id="connect" type="button">Conectar</button>
+        </div>
+
+        <p id="status" class="status">Desconectado</p>
+
+        <div class="event-actions">
+          <label for="event-device">Dispositivo</label>
+          <select id="event-device" class="device-select">
+            <option value="Sensor de teste">Sensor de teste</option>
+          </select>
+
+          <button type="button" data-event="door_open">
+            Simular porta aberta
+          </button>
+
+          <button type="button" data-event="door_closed">
+            Simular porta fechada
+          </button>
+
+          <button type="button" data-event="motion">
+            Simular movimento
+          </button>
+        </div>
+
+        <h2>Últimos eventos</h2>
+        <ul id="events" class="events-list"></ul>
+      </section>
+
+      <section class="panel monitor-panel">
+        <h2>Dispositivos cadastrados</h2>
+
+        <div class="device-form">
+          <input id="device-name" type="text" maxlength="80" placeholder="Nome do dispositivo" />
+          <select id="device-kind" class="device-select">
+            <option value="door">Porta</option>
+            <option value="sensor">Sensor</option>
+            <option value="outlet">Tomada</option>
+          </select>
+          <button id="register-device" type="button">Cadastrar</button>
+        </div>
+
+        <div id="device-list" class="device-list" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

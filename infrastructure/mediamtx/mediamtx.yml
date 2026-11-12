@@ -1,0 +1,20 @@
+paths:
+  camera1:
+    source: publisher
+    sourceOnDemand: true
+    rtspTransport: tcp
+
+  camera2:
+    source: publisher
+    sourceOnDemand: true
+    rtspTransport: tcp
+
+  camera3:
+    source: publisher
+    sourceOnDemand: true
+    rtspTransport: tcp
+
+  camera4:
+    source: publisher
+    sourceOnDemand: true
+    rtspTransport: tcp

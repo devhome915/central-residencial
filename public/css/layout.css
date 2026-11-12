@@ -1,0 +1,67 @@
+.app-shell {
+  width: min(100% - var(--space-8), var(--content-width));
+  margin: var(--space-8) auto;
+}
+
+.panel {
+  margin-top: var(--space-5);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-panel);
+}
+
+.field-group,
+.event-actions,
+.device-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.field-group {
+  margin-bottom: var(--space-4);
+}
+
+.event-actions {
+  margin-bottom: var(--space-6);
+}
+
+.device-form {
+  margin: var(--space-4) 0 var(--space-5);
+}
+
+.device-form input {
+  flex: 1 1 14rem;
+}
+
+.status {
+  margin-bottom: var(--space-4);
+  color: var(--color-text-muted);
+}
+
+.events-list {
+  margin: 0;
+  padding-left: var(--space-5);
+}
+
+@media (max-width: 40rem) {
+  .app-shell {
+    width: min(100% - var(--space-4), var(--content-width));
+    margin: var(--space-4) auto;
+  }
+
+  .panel {
+    padding: var(--space-3);
+  }
+
+  .field-group > input,
+  .field-group > button,
+  .device-form > input,
+  .device-form > select,
+  .device-form > button {
+    width: 100%;
+  }
+}
