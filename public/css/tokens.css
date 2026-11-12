@@ -1,0 +1,57 @@
+:root {
+  color-scheme: dark;
+
+  --color-canvas: #101827;
+  --color-surface: #121b2d;
+  --color-surface-raised: #151f31;
+  --color-surface-hover: #24314a;
+  --color-control: #1d2a3b;
+  --color-border: rgba(238, 243, 255, 0.12);
+  --color-border-strong: rgba(238, 243, 255, 0.18);
+  --color-text: #eef3ff;
+  --color-text-muted: #b3c0d4;
+  --color-accent: #7eb6ff;
+  --color-accent-soft: rgba(126, 182, 255, 0.12);
+  --color-success: #9ae6b4;
+  --color-success-soft: rgba(79, 201, 143, 0.14);
+  --color-warning: #f9d77c;
+  --color-warning-soft: rgba(251, 191, 36, 0.14);
+  --color-danger: #ffb4b4;
+  --color-danger-soft: rgba(255, 99, 99, 0.14);
+  --color-neutral: #dfe7f4;
+  --color-neutral-soft: rgba(148, 163, 184, 0.14);
+
+  --font-family-base: system-ui, sans-serif;
+  --font-size-xs: 0.72rem;
+  --font-size-sm: 0.9rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-title: clamp(1.8rem, 2vw, 2.4rem);
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --line-height-base: 1.5;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 0.75rem;
+  --radius-pill: 999px;
+
+  --shadow-panel: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.22);
+  --shadow-toast: 0 1rem 2rem rgba(0, 0, 0, 0.28);
+  --transition-fast: 180ms ease;
+  --transition-toast: 200ms ease;
+
+  --content-width: 47.5rem;
+  --control-height: 2.75rem;
+  --toast-duration: 5s;
+  --z-toast: 1000;
+}

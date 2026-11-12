@@ -1,0 +1,29 @@
+.event-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin: var(--space-3) 0;
+  color: var(--color-text);
+}
+
+.event-item span {
+  flex: 1;
+  min-width: 0;
+}
+
+.event-delete,
+.device-delete {
+  flex-shrink: 0;
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  border-color: var(--color-danger-soft);
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.event-delete:hover,
+.device-delete:hover {
+  border-color: var(--color-danger);
+  background: var(--color-danger-soft);
+}
